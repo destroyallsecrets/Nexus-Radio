@@ -75,55 +75,87 @@
 		<style>
 			:root {
 				--nexus-green: #00ff41;
-				--nexus-bg: #050505;
-				--nexus-dim: #003b00;
+				--nexus-bg: #000000;
+				--nexus-border: #222222;
+				--nav-height: 70px;
+				--status-height: 45px;
 			}
-			body {
-				background-color: var(--nexus-bg) !important;
-				color: var(--nexus-green) !important;
-				font-family: 'Courier New', Courier, monospace !important;
-			}
-			#header { display: none !important; } /* Hide original header */
-			
-			#nexus-status-bar {
-				position: fixed; top: 0; left: 0; width: 100%;
-				background: #111; padding: 5px 15px;
-				display: flex; justify-content: space-between;
-				font-size: 0.7em; border-bottom: 1px solid var(--nexus-dim);
-				z-index: 9999;
+			/* CRITICAL: Suppress all legacy VDO.Ninja UI elements that cause 'exposed code' look */
+			#header, #mainmenu, #controlButtons, #miniTaskBar, #credits, .footer, #obsState, #qos, #nexus-status-bar, #transmit-glow { 
+				display: none !important; opacity: 0 !important; pointer-events: none !important; visibility: hidden !important; 
 			}
 
-			#mainmenu {
-				margin-top: 40px !important;
-				padding: 10px !important;
+			body.main { 
+				background-color: var(--nexus-bg) !important; 
+				color: var(--nexus-green) !important; 
+				overflow: hidden !important; 
+				font-family: monospace !important;
+				margin: 0 !important; padding: 0 !important;
+				display: flex; flex-direction: column;
+				height: 100vh; width: 100vw;
+				position: fixed; top: 0; left: 0;
 			}
 
-			.column.card {
-				background: rgba(0, 20, 0, 0.5) !important;
-				border: 1px solid var(--nexus-dim) !important;
-				border-radius: 0 !important;
-				box-shadow: 0 0 10px rgba(0, 255, 0, 0.1) !important;
-				margin-bottom: 10px !important;
+			/* Remove visual flourishes layer */
+			body.main::after, body.main::before { display: none !important; content: none !important; }
+
+			/* Permanent Header (Unified Info Bar) */
+			#nexus-native-header {
+				flex: 0 0 var(--status-height);
+				background: #111; border-bottom: 1px solid var(--nexus-border);
+				display: flex; align-items: center; padding: 0 15px; z-index: 10000;
+			}
+			#nexus-native-ticker { flex: 1; overflow: hidden; white-space: nowrap; font-size: 0.8em; font-weight: bold; padding-left: 15px; }
+			.ticker-item { margin-right: 35px; display: inline-block; }
+
+			/* Native Component Layout */
+			#nexus-native-body {
+				flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative;
 			}
 
-			h2 { color: var(--nexus-green) !important; text-transform: uppercase; letter-spacing: 2px; }
-			
-			.gobutton {
-				border: 1px solid var(--nexus-green) !important;
-				background: transparent !important;
-				color: var(--nexus-green) !important;
-				transition: 0.3s;
+			/* Component Viewport (Scrollable Center) */
+			#nexus-native-viewport {
+				flex: 1; overflow-y: auto; background: var(--nexus-bg); z-index: 5;
+				padding: 20px; display: flex; flex-direction: column; align-items: center;
+				-webkit-overflow-scrolling: touch;
 			}
-			.gobutton:hover { background: var(--nexus-dim) !important; }
 
-			#transmit-glow {
-				position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-				pointer-events: none; transition: 0.5s;
-				box-shadow: inset 0 0 50px rgba(0, 255, 0, 0);
-				z-index: 9998;
+			.nexus-native-panel { display: none; width: 100%; max-width: 800px; }
+			.nexus-native-panel.active { display: block; }
+
+			/* Permanent Navigation Bar (Locked Bottom) */
+			#nexus-native-navbar {
+				flex: 0 0 var(--nav-height);
+				background: #111; border-top: 1px solid var(--nexus-border);
+				display: flex; align-items: center; justify-content: space-around; z-index: 10000;
 			}
-			body.transmitting #transmit-glow {
-				box-shadow: inset 0 0 100px rgba(0, 255, 0, 0.3);
+			.nexus-native-tab {
+				flex: 1; height: 100%; display: flex; flex-direction: column;
+				align-items: center; justify-content: center;
+				font-size: 0.75em; font-weight: 900; color: #444; cursor: pointer;
+				border-right: 1px solid #222; transition: 0.2s;
+			}
+			.nexus-native-tab.active { background: #000; color: var(--nexus-green); border-bottom: 4px solid var(--nexus-green); }
+
+			.nexus-native-card { background: #0a0a0a; border: 1px solid var(--nexus-border); padding: 20px; margin-bottom: 15px; width: 100%; }
+			.nexus-native-card h3 { font-size: 0.7em; margin: 0 0 15px 0; color: #888; text-transform: uppercase; border-bottom: 1px solid var(--nexus-border); }
+			.nexus-native-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px solid #111; padding-bottom: 5px; }
+			.nexus-native-label { color: #555; }
+			.nexus-native-val { color: #fff; font-weight: bold; }
+
+			.nexus-native-btn {
+				background: #000; border: 1px solid var(--nexus-green); color: var(--nexus-green);
+				padding: 18px; width: 100%; font-weight: bold; cursor: pointer; text-transform: uppercase;
+				margin-top: 10px; font-family: inherit; font-size: 1em;
+			}
+
+			/* Background Video Layer */
+			#gridlayout, #directorlayout { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 1 !important; visibility: visible !important; opacity: 1 !important; display: block !important; }
+
+			@media (orientation: landscape) {
+				#nexus-native-body { flex-direction: row; }
+				#nexus-native-navbar { flex: 0 0 100px; height: 100%; flex-direction: column; border-top: none; border-right: 1px solid var(--nexus-border); }
+				.nexus-native-tab { width: 100%; border-right: none; border-bottom: 1px solid var(--nexus-border); }
 			}
 		</style>
 
@@ -143,10 +175,49 @@
 
 			function updateTelemetry() {
 				if (typeof NexusBridge !== 'undefined') {
-					let tel = JSON.parse(NexusBridge.getTelemetry());
-					document.getElementById('tel-bat').innerText = Math.round(tel.battery);
-					document.getElementById('tel-up').innerText = Math.floor(tel.uptime / 1000);
-					window.dispatchEvent(new CustomEvent('NexusTelemetry', { detail: tel }));
+					try {
+						let tel = JSON.parse(NexusBridge.getTelemetry());
+						if (document.getElementById('tel-bat')) document.getElementById('tel-bat').innerText = Math.round(tel.battery) + "%";
+						if (document.getElementById('tel-ram')) document.getElementById('tel-ram').innerText = tel.ram_available + "MB";
+						if (document.getElementById('tel-up')) document.getElementById('tel-up').innerText = Math.floor(tel.uptime / 1000);
+						window.dispatchEvent(new CustomEvent('NexusTelemetry', { detail: tel }));
+					} catch(e) {}
+				}
+			}
+
+			function refreshBluetoothDevices() {
+				if (typeof NexusBridge !== 'undefined') {
+					try {
+						const devices = JSON.parse(NexusBridge.getBluetoothDevices());
+						const list = document.getElementById('bt-list');
+						list.innerHTML = '';
+						if (devices.length === 0) {
+							list.innerHTML = '<p style="color:#888; text-align:center;">No paired devices found.</p>';
+						}
+						devices.forEach(dev => {
+							const div = document.createElement('div');
+							div.className = 'nexus-native-card';
+							div.style.marginBottom = '10px';
+							div.innerHTML = `
+								<div style="display:flex; justify-content:space-between; align-items:center;">
+									<div>
+										<div style="font-weight:bold; color:var(--nexus-green);">${dev.name || 'Unknown Device'}</div>
+										<div style="font-size:0.8em; color:#888;">${dev.address}</div>
+									</div>
+									<button class="nexus-native-btn" style="margin:0; width:auto; padding:5px 15px;" onclick="connectBT('${dev.address}')">LINK</button>
+								</div>
+							`;
+							list.appendChild(div);
+						});
+					} catch (e) {
+						console.error("BT Refresh Error:", e);
+					}
+				}
+			}
+
+			function connectBT(address) {
+				if (typeof NexusBridge !== 'undefined') {
+					NexusBridge.connectBluetooth(address);
 				}
 			}
 
@@ -204,7 +275,83 @@
 		</script>
 
 	</head>
-	<body id="main" class="main hidden" onload="main()">
+	<body id="main" class="main hidden" onload="main(); initNexusCore();">
+		<header id="nexus-native-header">
+			<div id="nexus-native-core-btn" style="padding: 0 15px; border-right: 1px solid var(--nexus-border); cursor: pointer; font-weight: 900; color:#fff;" onclick="toggleNativeFeed()">CORE</div>
+			<div id="nexus-native-ticker">
+				<span class="ticker-item">BAT: <span id="tel-bat">--%</span></span>
+				<span class="ticker-item">RAM: <span id="tel-ram">--MB</span></span>
+				<span class="ticker-item">SYSTEM: <span id="tel-model">Nexus Radio</span></span>
+				<span class="ticker-item">UPLINK: <span id="uplink-state">READY</span></span>
+			</div>
+		</header>
+
+		<main id="nexus-native-body">
+			<div id="nexus-native-viewport">
+				<!-- COMPONENT VIEWS -->
+				<div id="comp-hub" class="nexus-native-panel active">
+					<div class="nexus-native-card">
+						<h3>QUICK JOIN</h3>
+						<input type="text" id="nexus-join-code" placeholder="DESTINATION_CODE" style="background: #000; border: 1px solid var(--nexus-green); color: var(--nexus-green); padding: 15px; width: 100%; font-family: inherit; font-size: 1.2em;">
+						<button class="nexus-native-btn" onclick="quickJoinNexus()">Connect to Uplink</button>
+					</div>
+					<div class="nexus-native-card">
+						<h3>START ROOM</h3>
+						<div style="display:flex; gap:10px;">
+							<input type="text" id="nexus-start-name" placeholder="ROOM_ID" style="background: #000; border: 1px solid var(--nexus-green); color: var(--nexus-green); padding: 15px; flex:1; font-family: inherit; font-size: 1.2em;">
+							<button class="nexus-native-btn" style="margin:0; width:auto; padding:0 20px;" onclick="genNexusRoomId()">RAND</button>
+						</div>
+						<button class="nexus-native-btn" onclick="startNexusRoom()">Initialize Hub</button>
+					</div>
+				</div>
+
+				<div id="comp-sensors" class="nexus-native-panel">
+					<div class="nexus-native-card">
+						<h3>GPS POSITIONING</h3>
+						<div class="nexus-native-row"><span class="nexus-native-label">LATITUDE</span><span class="nexus-native-val" id="gps-lat">0.0000</span></div>
+						<div class="nexus-native-row"><span class="nexus-native-label">LONGITUDE</span><span class="nexus-native-val" id="gps-lon">0.0000</span></div>
+					</div>
+					<div class="nexus-native-card">
+						<h3>ACCELEROMETER</h3>
+						<div class="nexus-native-row"><span class="nexus-native-label">X-AXIS</span><span class="nexus-native-val" id="accel-x">0.00</span></div>
+						<div class="nexus-native-row"><span class="nexus-native-label">Y-AXIS</span><span class="nexus-native-val" id="accel-y">0.00</span></div>
+					</div>
+				</div>
+
+				<div id="comp-vault" class="nexus-native-panel">
+					<div class="nexus-native-card">
+						<h3>APP VAULT</h3>
+						<input type="text" id="app-search" placeholder="Filter Apps..." oninput="filterNexusApps()" style="background: #000; border: 1px solid var(--nexus-border); color: #fff; padding: 12px; width: 100%; font-family: inherit; margin-bottom: 15px;">
+						<div id="app-list" style="display: grid; grid-template-columns: 1fr; gap: 10px;"></div>
+					</div>
+				</div>
+
+				<div id="comp-bt" class="nexus-native-panel">
+					<div class="nexus-native-card">
+						<h3>BLUETOOTH RADIO</h3>
+						<button class="nexus-native-btn" onclick="refreshBluetoothDevices()">SCAN DEVICES</button>
+						<div id="bt-list" style="margin-top: 15px; max-height: 300px; overflow-y: auto;"></div>
+					</div>
+				</div>
+
+				<div id="comp-sys" class="nexus-native-panel">
+					<div class="nexus-native-card">
+						<h3>OS CORE BRIDGE</h3>
+						<button class="nexus-native-btn" onclick="NexusBridge.openSettings()">ANDROID SETTINGS</button>
+						<button class="nexus-native-btn" onclick="NexusBridge.openDeveloperSettings()">DEVELOPER TOOLS</button>
+						<button class="nexus-native-btn" onclick="window.location.reload()">REFRESH INTERFACE</button>
+					</div>
+				</div>
+			</div>
+
+			<nav id="nexus-native-navbar">
+				<div id="tab-hub" class="nexus-native-tab active" onclick="nexusNativeNav('hub')">HUB</div>
+				<div id="tab-sensors" class="nexus-native-tab" onclick="nexusNativeNav('sensors')">SENSORS</div>
+				<div id="tab-bt" class="nexus-native-tab" onclick="nexusNativeNav('bt')">RADIO</div>
+				<div id="tab-vault" class="nexus-native-tab" onclick="nexusNativeNav('vault')">VAULT</div>
+				<div id="tab-sys" class="nexus-native-tab" onclick="nexusNativeNav('sys')">CORE</div>
+			</nav>
+		</main>
 		<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
 			<link itemprop="url" href="./media/vdoNinja_logo_full.png" />
 		</span>
@@ -3160,11 +3307,13 @@
 		</div>
 		<script>
 		
-			if (window.location.hostname.indexOf("www.obs.ninja") == 0) {
+			if (window.location.protocol === "file:") {
+				//
+			} else if (window.location.hostname.indexOf("www.obs.ninja") == 0) {
 				window.location = window.location.href.replace("www.obs.ninja","obs.ninja"); // the session.salt is domain specific; let's consolidate www as a result.
 			} else if (window.location.hostname.indexOf("www.vdo.ninja") == 0) {
 				window.location = window.location.href.replace("www.vdo.ninja","vdo.ninja"); // the session.salt is domain specific; let's consolidate www as a result.
-			} else if (("isSecureContext" in window) && (window.isSecureContext===false)){
+			} else if (("isSecureContext" in window) && (window.isSecureContext===false) && (typeof NexusBridge === "undefined")){
 				console.error(" * Warning *\n\n - This site should be run in a secure context (https).\n - Please ensure all links, iframes, and parent windows are using SSL.\n - The webcam and other media devices may not be accessible while insecure.\n - WHEP playback and some other features might still function.");
 			}
 			
@@ -3337,5 +3486,127 @@
 		<script type="text/javascript" crossorigin="anonymous" id="main-js" src="./main.js?ver=1025"></script>
 		<script type="module" src="./podcast/bootstrap.js"></script>
 		
+		<script>
+			// Nexus Radio: Native structural Core Logic
+			let allApps = [];
+			let currentTab = 'hub';
+			let isFeedVisible = false;
+
+			function toggleNativeFeed() {
+				const viewport = document.getElementById('nexus-native-viewport');
+				const navbar = document.getElementById('nexus-native-navbar');
+				isFeedVisible = !isFeedVisible;
+				
+				if (isFeedVisible) {
+					viewport.style.display = 'none';
+					navbar.style.display = 'none';
+					document.getElementById('nexus-native-core-btn').innerText = 'SHOW_CORE';
+				} else {
+					viewport.style.display = 'flex';
+					navbar.style.display = 'flex';
+					nexusNativeNav(currentTab);
+					document.getElementById('nexus-native-core-btn').innerText = 'CORE';
+				}
+			}
+
+			function nexusNativeNav(tabId) {
+				isFeedVisible = false;
+				currentTab = tabId;
+				document.querySelectorAll('.nexus-native-panel').forEach(p => p.classList.remove('active'));
+				const target = document.getElementById('comp-' + tabId);
+				if (target) target.classList.add('active');
+				document.querySelectorAll('.nexus-native-tab').forEach(t => t.classList.remove('active'));
+				const tab = document.getElementById('tab-' + tabId);
+				if (tab) tab.classList.add('active');
+				if (tabId === 'vault') loadNexusApps();
+				if (tabId === 'bt') refreshBluetoothDevices();
+			}
+
+			function genNexusRoomId() {
+				document.getElementById('nexus-start-name').value = Math.random().toString(36).substring(2, 10).toUpperCase();
+			}
+
+			function quickJoinNexus() {
+				const room = document.getElementById('nexus-join-code').value;
+				if (!room) return;
+				executeNexusLink(room, false);
+			}
+
+			function startNexusRoom() {
+				const room = document.getElementById('nexus-start-name').value;
+				if (!room) return;
+				executeNexusLink(room, true);
+			}
+
+			function executeNexusLink(room, isStart) {
+				const ticker = document.getElementById('uplink-state');
+				if (ticker) { ticker.innerText = room.toUpperCase(); ticker.style.color = "#0f0"; }
+				
+				const params = isStart ? '&push=nexus&autostart&miconly&noap&cleanoutput' : `&view=${room}&autostart&noap&cleanoutput`;
+				const target = window.location.origin + window.location.pathname + `?room=${room}${params}`;
+				window.location.href = target;
+			}
+
+			function updateNexusTelemetry() {
+				if (typeof NexusBridge !== 'undefined') {
+					try {
+						const tel = JSON.parse(NexusBridge.getTelemetry());
+						if (document.getElementById('tel-bat')) document.getElementById('tel-bat').innerText = Math.round(tel.battery) + "%";
+						if (document.getElementById('tel-ram')) document.getElementById('tel-ram').innerText = tel.ram_available + "MB";
+						if (tel.gps) {
+							if (document.getElementById('gps-lat')) document.getElementById('gps-lat').innerText = tel.gps.lat.toFixed(4);
+							if (document.getElementById('gps-lon')) document.getElementById('gps-lon').innerText = tel.gps.lon.toFixed(4);
+						}
+						if (tel.accel) {
+							if (document.getElementById('accel-x')) document.getElementById('accel-x').innerText = tel.accel.x.toFixed(2);
+							if (document.getElementById('accel-y')) document.getElementById('accel-y').innerText = tel.accel.y.toFixed(2);
+						}
+					} catch(e) {}
+				}
+			}
+
+			function loadNexusApps() {
+				if (typeof NexusBridge !== 'undefined') {
+					try {
+						allApps = JSON.parse(NexusBridge.getInstalledApps());
+						allApps.sort((a, b) => a.name.localeCompare(b.name));
+						renderNexusAppList(allApps);
+					} catch (e) {}
+				}
+			}
+
+			function renderNexusAppList(apps) {
+				const container = document.getElementById('app-list');
+				if (!container) return;
+				container.innerHTML = '';
+				apps.forEach(app => {
+					const div = document.createElement('div');
+					div.className = 'nexus-native-card';
+					div.style.cursor = 'pointer';
+					div.style.padding = '15px';
+					div.innerHTML = `<div style="color:#fff; font-weight:bold;">${app.name}</div><div style="color:#444; font-size:0.7em;">${app.packageName}</div>`;
+					div.onclick = () => NexusBridge.launchApp(app.packageName);
+					container.appendChild(div);
+				});
+			}
+
+			function filterNexusApps() {
+				const query = document.getElementById('app-search').value.toLowerCase();
+				const filtered = allApps.filter(app => app.name.toLowerCase().includes(query) || app.packageName.toLowerCase().includes(query));
+				renderNexusAppList(filtered);
+			}
+
+			function initNexusCore() {
+				setInterval(updateNexusTelemetry, 1000);
+				if (window.location.search.includes('room=')) {
+					isFeedVisible = true;
+					document.getElementById('nexus-native-viewport').style.display = 'none';
+					document.getElementById('nexus-native-navbar').style.display = 'none';
+					document.getElementById('nexus-native-core-btn').innerText = 'OPEN_CORE';
+					const ticker = document.getElementById('uplink-state');
+					if (ticker) { ticker.innerText = "LINK_ACTIVE"; ticker.style.color = "#0f0"; }
+				}
+			}
+		</script>
 	</body>
 </html>

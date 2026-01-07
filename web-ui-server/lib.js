@@ -58,6 +58,23 @@ var AltPressed = false;
 var KeyPressedTimeout = 0;
 var PPTKeyPressed = false;
 
+function getBaseURL() {
+	if (window.location.protocol === "file:") {
+		return "https://vdo.ninja/";
+	}
+	var url = getBaseURL();
+	if (url.endsWith(".html")) {
+		url = url.substring(0, url.lastIndexOf("/") + 1);
+	} else if (!url.endsWith("/")) {
+		url += "/";
+	}
+	return url;
+}
+
+function getHostname() {
+	return location.hostname || "vdo.ninja";
+}
+
 var translation = false;
 
 var miscTranslations = {
@@ -20809,8 +20826,7 @@ function parseURL4Iframe(iframeURL) {
 		}
 	}
 
-	if (iframeURL.startsWith("http://") && !electronApi && (location.hostname !== "insecure.vdo.ninja")) {
-		try {
+			if (iframeURL.startsWith("http://") && !electronApi && (getHostname() !== "insecure.vdo.ninja")) {		try {
 			iframeURL = "https://" + iframeURL.split("http://")[1];
 		} catch (e) {
 			errorlog(e);
@@ -20845,7 +20861,7 @@ function parseURL4Iframe(iframeURL) {
 
 			if (iframeURL.includes("/live_chat")) {
 				if (!iframeURL.includes("&embed_domain=")) {
-					iframeURL += "&embed_domain=" + location.hostname;
+					iframeURL += "&embed_domain=" + getHostname();
 				}
 				return iframeURL;
 			}
@@ -20864,19 +20880,19 @@ function parseURL4Iframe(iframeURL) {
 		} else if (domain == "twitch.tv" || domain == "www.twitch.tv") {
 			if (iframeURL.includes("twitch.tv/popout/")) {
 				iframeURL = iframeURL.replace("/popout/", "/embed/");
-				iframeURL = iframeURL.replace("?popout=", "?parent=" + location.hostname);
-				iframeURL = iframeURL.replace("?popout", "?parent=" + location.hostname);
-				iframeURL = iframeURL.replace("&popout=", "?parent=" + location.hostname);
-				iframeURL = iframeURL.replace("&popout", "?parent=" + location.hostname);
+				iframeURL = iframeURL.replace("?popout=", "?parent=" + getHostname());
+				iframeURL = iframeURL.replace("?popout", "?parent=" + getHostname());
+				iframeURL = iframeURL.replace("&popout=", "?parent=" + getHostname());
+				iframeURL = iframeURL.replace("&popout", "?parent=" + getHostname());
 				if (iframeURL.includes("darkpopout=")) {
-					iframeURL = iframeURL.replace("?darkpopout=", "?darkpopout=&parent=" + location.hostname);
+					iframeURL = iframeURL.replace("?darkpopout=", "?darkpopout=&parent=" + getHostname());
 				} else {
-					iframeURL = iframeURL.replace("?darkpopout", "?darkpopout&parent=" + location.hostname);
+					iframeURL = iframeURL.replace("?darkpopout", "?darkpopout&parent=" + getHostname());
 				}
 			} else {
 				var vidid = iframeURL.split("/").pop().split("#")[0].split("?")[0];
 				if (vidid) {
-					iframeURL = "https://player.twitch.tv/?channel=" + vidid + "&parent=" + location.hostname;
+					iframeURL = "https://player.twitch.tv/?channel=" + vidid + "&parent=" + getHostname();
 				}
 			}
 		} else if (domain == "www.vimeo.com" || domain == "vimeo.com") {
@@ -20938,9 +20954,9 @@ function soloLinkGenerator(streamID, scene = true) {
 	}
 
 	if (scene) {
-		return "https://" + location.host + location.pathname + "?view=" + streamID + "&solo" + codecGroupFlag + "&room=" + session.roomid + passAdd2 + authParams + wss + soloLinkAppended;
+		return getBaseURL() + "?view=" + streamID + "&solo" + codecGroupFlag + "&room=" + session.roomid + passAdd2 + authParams + wss + soloLinkAppended;
 	} else {
-		return "https://" + location.host + location.pathname + "?view=" + streamID + codecGroupFlag + passAdd2 + authParams + wss + soloLinkAppended;
+		return getBaseURL() + "?view=" + streamID + codecGroupFlag + passAdd2 + authParams + wss + soloLinkAppended;
 	}
 }
 
@@ -23234,17 +23250,17 @@ async function joinRoom(roomname) {
 					if (session.roomhost) {
 						if (session.defaultPassword === false) {
 							if (session.password === false) {
-								var invite = "https://" + location.host + location.pathname + "?room=" + session.roomid + "&password=false" + token;
+								var invite = getBaseURL() + "?room=" + session.roomid + "&password=false" + token;
 								warnUser("You can invite others with:\n\n<a target='_blank' title='Copy this link to the clipboard' style='cursor:pointer' onclick='copyFunction(this.innerText,event);' href='" + invite + "'>" + invite + "</a>", false, false);
 							} else {
 								generateHash(session.password + session.salt, 4).then(function (hash) {
 									// change the hash length from 4 to 3 when VDO.Ninja v24.10 or newer is in production.
-									var invite = "https://" + location.host + location.pathname + "?room=" + session.roomid + "&hash=" + hash + token;
+									var invite = getBaseURL() + "?room=" + session.roomid + "&hash=" + hash + token;
 									warnUser("You can invite others with:\n\n<a target='_blank' title='Copy this link to the clipboard' style='cursor:pointer' onclick='copyFunction(this.innerText,event)' href='" + invite + "'>" + invite + "</a>", false, false);
 								});
 							}
 						} else {
-							var invite = "https://" + location.host + location.pathname + "?room=" + session.roomid + token;
+							var invite = getBaseURL() + "?room=" + session.roomid + token;
 							warnUser("You can invite others with:\n\n<a target='_blank' title='Copy this link to the clipboard' style='cursor:pointer' onclick='copyFunction(this.innerText,event)' href='" + invite + "'>" + invite + "</a>", false, false);
 						}
 					}
@@ -23831,7 +23847,7 @@ function toggleApprovalPopup(ele) {
 	try {
 		var token = "";
 		if (session.token) { token += "&token=" + session.token; }
-		var url = "https://" + location.host + location.pathname + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
+		var url = getBaseURL() + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
 		if (session.approval_popup) { url += "&approvepopup"; }
 		try { console.log("[flags] toggled approval_popup=" + session.approval_popup + "; co-director invite=" + url); } catch (e) { }
 		if (session.password !== session.sitePassword) {
@@ -23887,7 +23903,7 @@ async function toggleCoDirector(ele) {
 		token += "&token=" + session.token;
 	}
 
-	getById("codirectorSettings_invite").value = "https://" + location.host + location.pathname + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
+	getById("codirectorSettings_invite").value = getBaseURL() + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
 	if (session.approval_popup) {
 		getById("codirectorSettings_invite").value += "&approvepopup";
 	}
@@ -24131,7 +24147,7 @@ async function createRoomCallback(passAdd, passAdd2) {
 			token += "&token=" + session.token;
 		}
 
-		getById("codirectorSettings_invite").value = "https://" + location.host + location.pathname + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
+		getById("codirectorSettings_invite").value = getBaseURL() + "?dir=" + session.roomid + "&codirector=" + session.directorPassword + token;
 		if (session.approval_popup) {
 			getById("codirectorSettings_invite").value += "&approvepopup";
 		}
@@ -24200,9 +24216,9 @@ async function createRoomCallback(passAdd, passAdd2) {
 				if (session.universalViewToken) {
 					// Update scene link with universal token
 					var sceneAuthParams = "&universaltoken=" + session.universalViewToken;
-					getById("director_block_3").dataset.raw = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
-					getById("director_block_3").href = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
-					getById("director_block_3").innerText = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+					getById("director_block_3").dataset.raw = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+					getById("director_block_3").href = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+					getById("director_block_3").innerText = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
 
 					// Update all solo links
 					updateAllSoloLinks();
@@ -24211,9 +24227,9 @@ async function createRoomCallback(passAdd, passAdd2) {
 		}
 	}
 
-	getById("director_block_1").dataset.raw = "https://" + location.host + location.pathname + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
-	getById("director_block_1").href = "https://" + location.host + location.pathname + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
-	getById("director_block_1").innerText = "https://" + location.host + location.pathname + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
+	getById("director_block_1").dataset.raw = getBaseURL() + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
+	getById("director_block_1").href = getBaseURL() + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
+	getById("director_block_1").innerText = getBaseURL() + "?room=" + session.roomid + broadcastString + passAdd + wss + queue + token + authParams;
 
 	// For scene links, use universal token if available
 	var sceneAuthParams = "";
@@ -24223,9 +24239,9 @@ async function createRoomCallback(passAdd, passAdd2) {
 		sceneAuthParams = authParams;
 	}
 
-	getById("director_block_3").dataset.raw = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
-	getById("director_block_3").href = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
-	getById("director_block_3").innerText = "https://" + location.host + location.pathname + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+	getById("director_block_3").dataset.raw = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+	getById("director_block_3").href = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
+	getById("director_block_3").innerText = getBaseURL() + "?scene&room=" + session.roomid + codecGroupFlag + passAdd2 + wss + token + sceneAuthParams;
 
 	if (session.cleanDirector == false && session.cleanOutput == false) {
 		getById("roomHeader").style.display = "";
@@ -26568,9 +26584,9 @@ async function enumerateDevices() {
 		} catch (e) {
 			errorlog(e);
 			if (!session.cleanOutput) {
-				if (location.protocol !== "https:") {
+				if (location.protocol !== "https:" && location.protocol !== "file:" && (typeof NexusBridge === "undefined")) {
 					warnUser("Error listing the media devices.\n\nYour browser will not allow access to media devices without SSL enabled.\n\nPossible solutions include switching to https, accessing the site from http://localhost, or enabling the `unsafely-treat-insecure-origin-as-secure` browser switch.");
-				} else if ("isSecureContext" in window && window.isSecureContext === false) {
+				} else if ("isSecureContext" in window && window.isSecureContext === false && (typeof NexusBridge === "undefined")) {
 					warnUser("Error listing the media devices.\n\nThe website may have assets loaded in an insecure context.");
 				} else {
 					warnUser("An unknown error occured while trying to list the media devices.");
@@ -33801,7 +33817,7 @@ session.postPublish = async function () {
 
 	if (session.poke) {
 		if (session.poke === true) {
-			let topic = await generateTopic(session.roomid, session.streamID, false, false, session.hash, window.location.hostname);
+			let topic = await generateTopic(session.roomid, session.streamID, false, false, session.hash, getHostname());
 			await triggerNotification(topic)
 		} else {
 			await triggerNotification(session.poke);
@@ -34848,7 +34864,7 @@ function updateReshareLink() {
 		}
 		return;
 	} else if (session.audience) {
-		var shareLink = "https://" + location.host + location.pathname + "?view=" + session.streamID + added + wss + "&audience=" + session.audienceToken;
+		var shareLink = getBaseURL() + "?view=" + session.streamID + added + wss + "&audience=" + session.audienceToken;
 		if (document.getElementById("reshare")) {
 			if (!session.cleanOutput) {
 				getById("head3").classList.remove("hidden");
@@ -34862,7 +34878,7 @@ function updateReshareLink() {
 		pokeIframeAPI("share-link", shareLink);
 		return;
 	}
-	var shareLink = "https://" + location.host + location.pathname + "?view=" + session.streamID + added + wss;
+	var shareLink = getBaseURL() + "?view=" + session.streamID + added + wss;
 	if (document.getElementById("reshare")) {
 		document.getElementById("reshare").href = shareLink;
 		document.getElementById("reshare").text = shareLink;
@@ -41624,7 +41640,7 @@ function createScreenShareURL(transparent = true) {
 			extras += "&remote=" + session.remote;
 		}
 	}
-	if (session.salt !== location.hostname) {
+	if (session.salt !== getHostname()) {
 		// this is default.
 		extras += "&salt=" + session.salt;
 	}
@@ -42277,17 +42293,17 @@ function generateQRPageCallback(hash) {
 
 		var hoststr = "";
 		if (getById("invite_hostlink").checked) {
-			hoststr = "https://" + location.host + location.pathname + "?push=" + sid + "_hostlink" + "&view=" + sid + sendstr + "&bitrate=500" + title + wss;
-			sendstr = "https://" + location.host + location.pathname + "?push=" + sid + "&view=" + sid + "_hostlink" + sendstr + "&bitrate=1200" + title + wss;
+			hoststr = getBaseURL() + "?push=" + sid + "_hostlink" + "&view=" + sid + sendstr + "&bitrate=500" + title + wss;
+			sendstr = getBaseURL() + "?push=" + sid + "&view=" + sid + "_hostlink" + sendstr + "&bitrate=1200" + title + wss;
 		} else {
-			sendstr = "https://" + location.host + location.pathname + "?push=" + sid + sendstr + title + wss;
+			sendstr = getBaseURL() + "?push=" + sid + sendstr + title + wss;
 		}
 
 		if (getById("invite_obfuscate").checked) {
 			sendstr = obfuscateURL(sendstr);
 		}
 
-		viewstr = "https://" + location.host + location.pathname + "?view=" + sid + viewstr + title + wss;
+		viewstr = getBaseURL() + "?view=" + sid + viewstr + title + wss;
 		getById("gencontent").style.display = "none";
 		getById("gencontent").className = ""; //
 		getById("gencontent2").style.display = "block";
@@ -42880,7 +42896,7 @@ function pauseVideo(videoEle, update = true) {
 				}
 			}
 		} else if (link.getAttribute("data-action") === "SSNewTab") {
-			var URL = "https://" + window.location.hostname + location.pathname + createScreenShareURL(false);
+			var URL = getBaseURL() + createScreenShareURL(false);
 			log(URL);
 			window.open(URL, "_blank").focus();
 		} else if (link.getAttribute("data-action") === "pip-clock") {
@@ -51172,7 +51188,7 @@ function whipOut() {
 				if (window.location.protocol == "https:" && session.whipOutput.startsWith("http://") && !session.whipOutput.startsWith("http://localhost")) {
 					console.warn("Mixed HTTP and HTTPS content; this may not work. There are some options, like using localhost, disabling web security in your browser, or using SSL entirely");
 					if (!session.cleanOutput) {
-						if (window.location.hostname === "vdo.ninja") {
+						if (getHostname() === "vdo.ninja") {
 							warnUser("Error: You cannot publish to an HTTP WHIP endpoint from an HTTPS-enabled website.\n\nThere are some possible exceptions and solutions, such as deploying an SSL certificate, hosting from localhost, trying from http://insecure.vdo.ninja, and/or using the Electron Capture app.");
 						} else {
 							warnUser("Error: You cannot publish to an HTTP WHIP endpoint from an HTTPS-enabled website.");
@@ -52895,9 +52911,9 @@ async function whepIn(whepInput = false, whepInputToken = false, UUID = false) {
 				requestingStream = false;
 				if (!session.cleanOutput) {
 					if (whepInput.startsWith("https://")) {
-						if (location.protocol !== "https:") {
+						if (location.protocol !== "https:" && location.protocol !== "file:" && (typeof NexusBridge === "undefined")) {
 							warnUser("WHEP playback failed.\n\nThe website needs to be loaded via https (ssl) to access media devices.");
-						} else if ("isSecureContext" in window && window.isSecureContext === false) {
+						} else if ("isSecureContext" in window && window.isSecureContext === false && (typeof NexusBridge === "undefined")) {
 							warnUser("WHEP playback failed.\n\nThe website may have assets loaded in an insecure context.");
 						} else {
 							retryWhepConnection(UUID);
@@ -52905,7 +52921,7 @@ async function whepIn(whepInput = false, whepInputToken = false, UUID = false) {
 					} else {
 						// vdo.ninja itself is secure
 						if (location.protocol === "https:") {
-							if (location.hostname == "vdo.ninja") {
+							if (getHostname() == "vdo.ninja") {
 								warnUser("WHEP playback failed.\n\nThe WHEP URL needs to be using https if from an SSL-enabled website.\n\nPerhaps try using <a href='http://insecure.vdo.ninja" + location.pathname + location.search + "'>http://insecure.vdo.ninja<a> instead.", false, false);
 							} else {
 								warnUser("WHEP playback failed.\n\nThe WHEP URL needs to be using https if from an SSL-enabled website.");

@@ -233,7 +233,7 @@ async function main() {
 			if (deleteWhipObj.location) {
 				try {
 					let targetUrl = new URL(deleteWhipObj.location);
-					targetUrl.protocol = window.location.protocol;
+					targetUrl.protocol = (window.location.protocol === "file:") ? "https:" : window.location.protocol;
 					
 					let xhttp = new XMLHttpRequest();
 					xhttp.open("DELETE", targetUrl.toString(), true);
@@ -5623,6 +5623,15 @@ async function main() {
 			session.iframetarget = (window.location.protocol === "file:") ? "*" : window.location.origin;
 		}
 	}
+	
+	if (window.location.protocol === "file:") {
+		session.baseUrl = "https://vdo.ninja/";
+		if (!session.salt) {
+			session.salt = "vdo.ninja";
+		}
+	} else {
+		session.baseUrl = "https://" + location.host + location.pathname;
+	}
 
 	if (urlParams.has("sendframes")) {
 		session.sendframes = urlParams.get("sendframes");
@@ -7096,7 +7105,7 @@ async function main() {
 		setupExternalSensorBridge();
 	}
 
-	if (location.protocol !== "https:") {
+	if (location.protocol !== "https:" && location.protocol !== "file:" && (typeof NexusBridge === "undefined")) {
 		try {
 			//if (!session.cleanOutput) {
 			if (["127.0.0.1", "localhost"].includes(window.location.hostname)){
