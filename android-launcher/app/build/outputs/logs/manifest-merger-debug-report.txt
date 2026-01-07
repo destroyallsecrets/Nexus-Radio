@@ -1,0 +1,330 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\kampv\.gradle\caches\transforms-3\72a506e7964b38710f54049636e1692c\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\dfcb30908220c7165ddfe76f6576aca2\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\kampv\.gradle\caches\transforms-3\29377f51e4572dcbc824b53a88a7d42e\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\96ac74e0fcda81e9dc5edb4820834ca3\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\da8e440932c80c7f69409c9caf25ab35\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\kampv\.gradle\caches\transforms-3\1b12019b362bd40304a63473c3ac6d50\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\kampv\.gradle\caches\transforms-3\8d5e2ff6e2556b882a09d15e96e0e806\transformed\activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\35cf8d0b2623ea3157d3888e9dd48511\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\5cb0c7f9673723ee36f050c97b4acd0c\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\05b7acb4fb0f6168307ebc47d2824cf7\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\528c2c782de6e6e347300d0d54dc53bc\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\30707d9d4f31a1638a2d16c5d950483d\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a867e42b47bd2ccd4a5636fe101a9e3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a4b4f08d90d4e79fc9fc34ec3701e98\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\990ffa8fdfb7b11315d12d7a8d59b5b3\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\286e8c194544fafe3ab1079cf03b7b39\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\kampv\.gradle\caches\transforms-3\ccbf2610ee183f75c557a73185e74ada\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\bae3911a2ab53e5c03a3146d848c293e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\83f18b06357fdc8829f8a0de6e1bbffe\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\0a4ed97a150a7dc3eca3585d5b937136\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\613ff5c7750beeb8c2d74fdbe9649989\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\e1ee3069e9e383db61266763614a66bf\transformed\lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\9f91e3b16df20dcbe37af3fe2a0a72ff\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b75bbe99e0a9674b6461bfd0111b006e\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\70de3755d4b5244c7181597e9413fc66\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\344aebea2421d83de0eba393f37a0bca\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\783109eaf4824341fba5ab40b3ca5afb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b663c74897f455f3ff548918ab94b7e3\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\473d6803669e7483a792ef5404126b4e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\469e42d14f123fe6b7a37e9b0e970405\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b97eacea6d0b1450925958845a105002\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b67a51cec8141671337a34302841c8af\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\e83f2303dd287321e9dcfb6dcfd99d20\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\1cd48132cef98e2f53772ffa30249f39\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\8f582ca3551a0f6c396056a1c0a8169d\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\3ef26f250acbb1c3f559a679ae2591a4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:5:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:6:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:8:22-78
+application
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:10:5-37:19
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:10:5-37:19
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\kampv\.gradle\caches\transforms-3\72a506e7964b38710f54049636e1692c\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\kampv\.gradle\caches\transforms-3\72a506e7964b38710f54049636e1692c\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\kampv\.gradle\caches\transforms-3\29377f51e4572dcbc824b53a88a7d42e\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\kampv\.gradle\caches\transforms-3\29377f51e4572dcbc824b53a88a7d42e\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\473d6803669e7483a792ef5404126b4e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\473d6803669e7483a792ef5404126b4e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:13:9-36
+	android:icon
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:12:9-58
+	android:allowBackup
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:16:9-67
+	android:usesCleartextTraffic
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:15:9-44
+activity#com.kampv.vdoninjalocal.MainActivity
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:18:9-29:20
+	android:stateNotNeeded
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:22:13-42
+	android:launchMode
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:21:13-48
+	android:exported
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:19:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:23:13-28:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:25:27-74
+category#android.intent.category.HOME
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:26:17-73
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:26:27-70
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:27:17-76
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:27:27-73
+receiver#com.kampv.vdoninjalocal.BootReceiver
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:31:9-35:20
+	android:exported
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:31:48-71
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:31:19-47
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:32:13-34:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:33:17-79
+	android:name
+		ADDED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml:33:25-76
+uses-sdk
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\kampv\.gradle\caches\transforms-3\72a506e7964b38710f54049636e1692c\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\kampv\.gradle\caches\transforms-3\72a506e7964b38710f54049636e1692c\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\dfcb30908220c7165ddfe76f6576aca2\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\dfcb30908220c7165ddfe76f6576aca2\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\kampv\.gradle\caches\transforms-3\29377f51e4572dcbc824b53a88a7d42e\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\kampv\.gradle\caches\transforms-3\29377f51e4572dcbc824b53a88a7d42e\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\96ac74e0fcda81e9dc5edb4820834ca3\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\kampv\.gradle\caches\transforms-3\96ac74e0fcda81e9dc5edb4820834ca3\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\da8e440932c80c7f69409c9caf25ab35\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\da8e440932c80c7f69409c9caf25ab35\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\kampv\.gradle\caches\transforms-3\1b12019b362bd40304a63473c3ac6d50\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\kampv\.gradle\caches\transforms-3\1b12019b362bd40304a63473c3ac6d50\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\kampv\.gradle\caches\transforms-3\8d5e2ff6e2556b882a09d15e96e0e806\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\kampv\.gradle\caches\transforms-3\8d5e2ff6e2556b882a09d15e96e0e806\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\35cf8d0b2623ea3157d3888e9dd48511\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\35cf8d0b2623ea3157d3888e9dd48511\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\5cb0c7f9673723ee36f050c97b4acd0c\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\5cb0c7f9673723ee36f050c97b4acd0c\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\05b7acb4fb0f6168307ebc47d2824cf7\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\05b7acb4fb0f6168307ebc47d2824cf7\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\528c2c782de6e6e347300d0d54dc53bc\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\528c2c782de6e6e347300d0d54dc53bc\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\30707d9d4f31a1638a2d16c5d950483d\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\30707d9d4f31a1638a2d16c5d950483d\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a867e42b47bd2ccd4a5636fe101a9e3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a867e42b47bd2ccd4a5636fe101a9e3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a4b4f08d90d4e79fc9fc34ec3701e98\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\8a4b4f08d90d4e79fc9fc34ec3701e98\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\990ffa8fdfb7b11315d12d7a8d59b5b3\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\990ffa8fdfb7b11315d12d7a8d59b5b3\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\286e8c194544fafe3ab1079cf03b7b39\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\286e8c194544fafe3ab1079cf03b7b39\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\kampv\.gradle\caches\transforms-3\ccbf2610ee183f75c557a73185e74ada\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\kampv\.gradle\caches\transforms-3\ccbf2610ee183f75c557a73185e74ada\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\bae3911a2ab53e5c03a3146d848c293e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\bae3911a2ab53e5c03a3146d848c293e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\83f18b06357fdc8829f8a0de6e1bbffe\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\83f18b06357fdc8829f8a0de6e1bbffe\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\0a4ed97a150a7dc3eca3585d5b937136\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\0a4ed97a150a7dc3eca3585d5b937136\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\613ff5c7750beeb8c2d74fdbe9649989\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\613ff5c7750beeb8c2d74fdbe9649989\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\e1ee3069e9e383db61266763614a66bf\transformed\lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\e1ee3069e9e383db61266763614a66bf\transformed\lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\9f91e3b16df20dcbe37af3fe2a0a72ff\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\9f91e3b16df20dcbe37af3fe2a0a72ff\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b75bbe99e0a9674b6461bfd0111b006e\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b75bbe99e0a9674b6461bfd0111b006e\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\70de3755d4b5244c7181597e9413fc66\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\70de3755d4b5244c7181597e9413fc66\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\344aebea2421d83de0eba393f37a0bca\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\kampv\.gradle\caches\transforms-3\344aebea2421d83de0eba393f37a0bca\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\783109eaf4824341fba5ab40b3ca5afb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\783109eaf4824341fba5ab40b3ca5afb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b663c74897f455f3ff548918ab94b7e3\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b663c74897f455f3ff548918ab94b7e3\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\473d6803669e7483a792ef5404126b4e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\473d6803669e7483a792ef5404126b4e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\469e42d14f123fe6b7a37e9b0e970405\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\469e42d14f123fe6b7a37e9b0e970405\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b97eacea6d0b1450925958845a105002\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\b97eacea6d0b1450925958845a105002\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b67a51cec8141671337a34302841c8af\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b67a51cec8141671337a34302841c8af\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\e83f2303dd287321e9dcfb6dcfd99d20\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\e83f2303dd287321e9dcfb6dcfd99d20\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\1cd48132cef98e2f53772ffa30249f39\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\1cd48132cef98e2f53772ffa30249f39\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\8f582ca3551a0f6c396056a1c0a8169d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\kampv\.gradle\caches\transforms-3\8f582ca3551a0f6c396056a1c0a8169d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\3ef26f250acbb1c3f559a679ae2591a4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\3ef26f250acbb1c3f559a679ae2591a4\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\kampv\vdoninja_local\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\kampv\.gradle\caches\transforms-3\ad9c54ddca77546ce7d0e3b672c6aa83\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\kampv\.gradle\caches\transforms-3\b197d13d0fcd66c032bc8c21f3ed6e34\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\kampv\.gradle\caches\transforms-3\d350bdff9f174bbc420b487e7e608a0d\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.kampv.vdoninjalocal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.kampv.vdoninjalocal.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\kampv\.gradle\caches\transforms-3\ca38b55ffb71e6ba94eed13118341239\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\kampv\.gradle\caches\transforms-3\f2bcce5156d4d7acd2f454265b008345\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
